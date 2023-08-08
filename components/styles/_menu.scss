@@ -1,0 +1,220 @@
+@mixin ellips-img {
+    overflow: hidden;
+    border-radius: 100px;
+}
+
+
+
+.basic {
+    display: flex;
+
+    .nav {
+        padding: 30px 25px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 200px;
+        border-right: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+
+        .tools {
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+
+            position: relative;
+
+            img {
+                @include icon ();
+            }
+
+            .red-dot {
+                @include dot(10px, 10px, red);
+                position: absolute;
+                top: 152px;
+                left: 38px;
+            }
+        }
+
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 21px;
+
+            position: relative;
+
+
+            .img {
+                overflow: hidden;
+                width: 50px;
+                height: 50px;
+                border-radius: 200px;
+
+            }
+
+            &>a {
+                @include icon();
+            }
+
+
+            .blue-dot {
+                @include dot (10px, 10px, blue);
+
+                position: absolute;
+                top: 0px;
+                left: 35px;
+            }
+        }
+    }
+
+    #card-data{
+        padding: 30px;
+    }
+    .cards {
+        display: flex;
+        gap: 30px;
+
+        .main-card {
+            width: 350px;
+            height: 210px;
+            background: linear-gradient(#FFA346 0%, #e0c31d 100%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 30px 60px 0px rgba(230, 46, 46, 0.15);
+
+
+            .card-balance {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h1 {
+                    color: var(--white-white, #FFF);
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                h4 {
+                    color: var(--white-white, #FFF);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                }
+            }
+
+            .card-number {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+
+                .dots {
+                    display: flex;
+                    gap: 3px;
+
+                    .dot {
+                        @include dot(5px, 5px, white);
+                    }
+                }
+
+                h4 {
+                    color: var(--white-white, #FFF);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                }
+            }
+
+            .card-owner {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h4 {
+                    color: var(--white-white, #FFF);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .ellips1 {
+                    @include dot (60px, 60px, red);
+                    transform: translate(67px);
+                }
+
+                .ellips2 {
+                    opacity: 0.7;
+                    @include dot (60px, 60px, #FF5F00);
+                }
+            }
+        }
+
+        .other-cards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+
+            .card {
+                border-radius: 3px;
+                box-shadow: 0px 1px 63px 0px rgba(244, 239, 255, 0.20) inset;
+                width: 65px;
+                height: 40px;
+                padding: 4px 7px;
+                cursor: pointer;
+
+                h4 {
+                    color: var(--white-white, #FFF);
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .ellipses {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding-top: 5px;
+
+                    .ellips3 {
+                        @include dot (15px, 15px, transparent);
+                        background-color: red;
+                        transform: translate(4px);
+                    }
+
+                    .ellips4 {
+                        @include dot (15px, 15px, transparent);
+                        background-color: #FF5F00;
+                        opacity: 0.6;
+                    }
+
+                }
+            }
+
+            .card1 {
+                background: linear-gradient(197deg, #6246FF 0%, #FFB9B9 100%);
+
+            }
+
+            .card2 {
+                background: linear-gradient(197deg, #FFA346 0%, #F2E32E 100%);
+                
+
+            }
+
+            .card3 {
+                background: linear-gradient(197deg, #3B3B3B 0%, #767676 100%);
+            }
+        }
+
+
+
+
+
+    }
+
+}

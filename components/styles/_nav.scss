@@ -1,0 +1,228 @@
+@mixin icon {
+    padding: 10px;
+    border-radius: 100px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+}
+
+@mixin dot ($width, $height, $bg-color) {
+    width: $width;
+    height: $height;
+    border-radius: 50px;
+    background-color: $bg-color;
+
+}
+
+nav {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+
+        .menu {
+         order: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+
+            img {
+                @include icon();
+            }
+
+            h4 {
+                color: var(--gray-blue-grey-blue-50, #4d5e80);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+            }
+        }
+
+        .links {
+            order: 2;
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 40px;
+
+                a {
+                    text-decoration: none;
+                    color: var(--gray-blue-grey-blue-70, #7d8fb3);
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 700;
+                    padding: 3px;
+                }
+
+                .dots {
+                    display: flex;
+                    align-items: center;
+                    gap: 3px;
+
+                    .another {
+                        @include dot(5px, 5px, #9e8f8f);
+                    }
+                }
+            }
+        }
+
+        .search {
+            order: 3;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            @include icon();
+
+            input {
+                outline: none;
+                border: none;
+                color: #ADB8CC;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+            }
+        }
+
+        .me{
+            order: 5;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .profile {
+            order: 6;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            padding-left: 30px;
+            p {
+                color: var(--gray-blue-grey-blue-60, #6B7A99);
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 700;
+            }
+
+            .images{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                position: relative;
+
+                
+                img {
+                    @include icon();
+                }
+
+                &>:nth-child(1){
+                    order: 2;
+                }
+                &>:nth-child(2){
+                    order: 2;
+                }
+                &>:nth-child(3){
+                    order: 1;
+                    display: none
+                }
+
+                &>:nth-child(4){
+                    order: 4;
+                    display: none ;
+                }
+
+
+                .red-dot{
+                    @include dot(10px,10px ,red);
+                    position: absolute;
+                    top: 3px;
+                    right: 65px;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+@media (max-width:1280px){
+    nav{
+        .navbar{
+            .search{
+               display: none;
+            }
+            .profile{
+                .images{
+                
+                        &>:nth-child(3){
+                            display: inline-block !important;
+                        }
+        
+                        &>:nth-child(4){
+                            display: inline-block  !important ;
+                        }
+    
+    
+                        .red-dot{
+                            position: absolute;
+                            right: 124px !important;
+                        }
+    
+                    
+                }
+            }
+
+            .links {
+                ul {
+                    gap: 24px !important;
+                }
+            }
+
+
+        }
+    }
+}
+
+
+
+@media (max-width:980px){
+    .links {
+        ul {
+            display: none !important;
+        }
+    }
+
+    .navbar{
+        padding: 15px !important;
+    }
+}
+
+
+@media (max-width:600px){
+    .me {
+        display: none !important;
+    }
+
+    .images{
+       a{
+        display: none !important;
+       }
+
+       .red-dot{
+        display: none   ;
+       }
+
+       #search {
+        display: none;
+       }
+    }
+
+}
