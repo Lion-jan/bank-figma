@@ -3,6 +3,20 @@
     border-radius: 100px;
 }
 
+@mixin anothers {
+    display: flex;
+    gap: 3px;
+    padding: 17px 9px ;
+    background-color: #fff;
+    border-radius: 100px;
+    box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+    cursor: pointer;
+
+    &>div {
+        @include dot (5px, 5px, rgb(184, 182, 182))
+    }
+}
+
 
 
 .basic {
@@ -69,9 +83,10 @@
         }
     }
 
-    #card-data{
+    #card-data {
         padding: 30px;
     }
+
     .cards {
         display: flex;
         gap: 30px;
@@ -202,7 +217,7 @@
 
             .card2 {
                 background: linear-gradient(197deg, #FFA346 0%, #F2E32E 100%);
-                
+
 
             }
 
@@ -211,10 +226,62 @@
             }
         }
 
+    }
 
+    .circle-graph {
+        padding-top: 75px;
+        .graph-groups {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2); 
 
+            .group-left {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
 
+                img {
+                    padding: 6px;
+                    border-radius: 100px;
+                    border: 2px solid var(--gray-blue-grey-blue-97, #F5F6F7);
+                    background: var(--white-white, #FFF);
+                    box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+                }
 
+                a {
+                    text-decoration: none;
+                    color: var(--purple-purple, #83F);
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 900;
+                }
+
+            }
+
+            .group-right {
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: var(--gray-blue-grey-blue-70, #7D8FB3);
+                    text-align: center;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .another {
+                    @include anothers();
+                }
+            }
+        }
     }
 
 }
