@@ -1,0 +1,98 @@
+#cashback {
+    max-width: 635px;
+}
+
+.cashback-menu {
+    .cashback-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 120px;
+        padding: 15px;
+        border-bottom: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+
+        .types {
+            ul {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                gap: 40px;
+
+                a {
+                    text-decoration: none;
+                    color: var(--gray-blue-grey-blue-70, #7D8FB3);
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 900;
+                }
+            }
+        }
+
+        .another {
+            @include anothers();
+        }
+
+        img {
+            @include icon();
+        }
+    }
+.cashbacks{
+    height: 500px;
+    overflow-x: scroll;
+}
+    .cashback-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border-bottom: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+        border-right: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+
+
+        .cashback-for {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            p {
+                color: var(--gray-blue-grey-blue-70, #7D8FB3);
+                font-size: 13px;
+                font-weight: 700;
+            }
+
+            h5 {
+                color: var(--gray-blue-grey-blue-50, #4D5E80);
+                font-size: 13px;
+                font-weight: 700;
+            }
+        }
+
+        .cashback {
+            p {
+                color: var(--green-green, #29CC39);
+                font-size: 12px;
+                font-weight: 900;
+                @include icon();
+                background: var(--green-green-5, rgba(41, 204, 57, 0.05));
+            }
+        }
+
+        .cashback-price {
+
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            p {
+                color: var(--gray-blue-grey-blue-60, #6B7A99);
+                font-size: 12px;
+                font-weight: 900;
+                @include icon ();
+                background: var(--gray-blue-grey-blue-98, #F7F8FA);
+
+            }
+
+            .another{
+                @include anothers();
+            }
+        }
+    }
+}

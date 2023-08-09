@@ -171,6 +171,7 @@ nav .navbar .profile .images .red-dot {
 }
 .basic {
   display: flex;
+  flex-basis: 200px;
 }
 .basic .nav {
   padding: 30px 25px;
@@ -232,6 +233,7 @@ nav .navbar .profile .images .red-dot {
 }
 .basic #card-data {
   padding: 30px;
+  max-width: 516px;
 }
 .basic .cards {
   display: flex;
@@ -362,7 +364,8 @@ nav .navbar .profile .images .red-dot {
   background: linear-gradient(197deg, #3B3B3B 0%, #767676 100%);
 }
 .basic .circle-graph {
-  padding-top: 75px;
+  margin-top: 75px;
+  background-color: #fff;
 }
 .basic .circle-graph .graph-groups {
   display: flex;
@@ -415,6 +418,150 @@ nav .navbar .profile .images .red-dot {
   cursor: pointer;
 }
 .basic .circle-graph .graph-groups .group-right .another > div {
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+  background-color: rgb(184, 182, 182);
+}
+.basic .circle-graph .circle-graph-flex {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+}
+.basic .circle-graph .circle-graph-flex .circle-graph-bottom .pricing {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.basic .circle-graph .circle-graph-flex .circle-graph-bottom .pricing .price {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 6px 20px 6px 15px;
+  border-radius: 20px;
+  border: 2px solid var(--gray-blue-grey-blue-97, #F5F6F7);
+  background: var(--white-white, #FFF);
+  /* Shadows/Gray Blue 30/3%/5b */
+  box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+}
+.basic .circle-graph .circle-graph-flex .circle-graph-bottom .pricing .price p {
+  color: var(--gray-blue-grey-blue-70, #7D8FB3);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+#cashback {
+  max-width: 635px;
+}
+
+.cashback-menu .cashback-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 120px;
+  padding: 15px;
+  border-bottom: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+}
+.cashback-menu .cashback-top .types ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 40px;
+}
+.cashback-menu .cashback-top .types ul a {
+  text-decoration: none;
+  color: var(--gray-blue-grey-blue-70, #7D8FB3);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+}
+.cashback-menu .cashback-top .another {
+  display: flex;
+  gap: 3px;
+  padding: 17px 9px;
+  background-color: #fff;
+  border-radius: 100px;
+  box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+  cursor: pointer;
+}
+.cashback-menu .cashback-top .another > div {
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+  background-color: rgb(184, 182, 182);
+}
+.cashback-menu .cashback-top img {
+  padding: 10px;
+  border-radius: 100px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+}
+.cashback-menu .cashbacks {
+  height: 500px;
+  overflow-x: scroll;
+}
+.cashback-menu .cashback-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+  border-right: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+}
+.cashback-menu .cashback-bottom .cashback-for {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cashback-menu .cashback-bottom .cashback-for p {
+  color: var(--gray-blue-grey-blue-70, #7D8FB3);
+  font-size: 13px;
+  font-weight: 700;
+}
+.cashback-menu .cashback-bottom .cashback-for h5 {
+  color: var(--gray-blue-grey-blue-50, #4D5E80);
+  font-size: 13px;
+  font-weight: 700;
+}
+.cashback-menu .cashback-bottom .cashback p {
+  color: var(--green-green, #29CC39);
+  font-size: 12px;
+  font-weight: 900;
+  padding: 10px;
+  border-radius: 100px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+  background: var(--green-green-5, rgba(41, 204, 57, 0.05));
+}
+.cashback-menu .cashback-bottom .cashback-price {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.cashback-menu .cashback-bottom .cashback-price p {
+  color: var(--gray-blue-grey-blue-60, #6B7A99);
+  font-size: 12px;
+  font-weight: 900;
+  padding: 10px;
+  border-radius: 100px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+  background: var(--gray-blue-grey-blue-98, #F7F8FA);
+}
+.cashback-menu .cashback-bottom .cashback-price .another {
+  display: flex;
+  gap: 3px;
+  padding: 17px 9px;
+  background-color: #fff;
+  border-radius: 100px;
+  box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+  cursor: pointer;
+}
+.cashback-menu .cashback-bottom .cashback-price .another > div {
   width: 5px;
   height: 5px;
   border-radius: 50px;
