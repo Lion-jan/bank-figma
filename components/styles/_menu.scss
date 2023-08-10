@@ -33,7 +33,8 @@ box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
 
 .basic {
     display: flex;
-    flex-basis: 200px;
+    justify-content: space-between;
+
     .nav {
         padding: 30px 25px;
         display: flex;
@@ -97,12 +98,19 @@ box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
 
     #card-data {
         padding: 30px;
-        max-width: 516px;
+        max-width: 516px;   
+        flex-wrap: nowrap;
+        .carousel{
+            display: none;
+        }
     }
 
-    .cards {
+    .cards1{
         display: flex;
         gap: 30px;
+
+
+        
 
         .main-card {
             width: 350px;
@@ -335,4 +343,147 @@ box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
 
     }
 
+}
+
+
+
+@media (max-width:1280px){
+    .nav{
+        display: none  !important;
+
+
+    }
+
+    #right-section{
+        display: none !important;
+
+    }
+}
+
+
+@media (max-width:1119px){
+    .basic{
+        flex-direction: column;
+        align-items: center;
+        max-width: 100% !important;
+        #card-data{
+            max-width: 100% ;
+            .carousel{
+                display: block;
+                transform: scale(0.7);
+            }
+
+            .cards1 {
+                display: none;
+            }
+        }
+
+        .circle-graph{
+            .circle-graph-flex{
+                flex-direction: row !important;
+                gap: 54px;
+            //    padding-left: 100px;
+            //    padding-right: 100px;
+               
+        }
+
+        #card-data {
+            .carousel{
+                display: block !important;
+            }
+        }
+    }
+
+
+    #cashback{
+        max-width: 100% !important;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .cards{
+        justify-content: center;
+    }
+    
+}
+
+}
+@media (max-width:647px ){
+
+
+    #card-data{
+        max-width: 100% ;
+        .carousel{
+            display: none !important;    
+        }
+
+        .cards1 {
+            display: block !important;
+            align-items: center;
+
+            .other-cards{
+                flex-direction: row;
+                padding-left: 20px;
+                transform: translate(0,-10px);
+            }
+        }
+    }
+    
+
+    .basic{
+
+        flex-direction: column;
+        align-items: center;
+        max-width: 100% !important;
+        #card-data{
+            max-width: 100% ;
+        }
+
+        .circle-graph{
+            .circle-graph-flex{
+                flex-direction: column !important;
+                gap: 54px;
+                .circle-graph-bottom{
+                    .pricing{
+                        flex-direction: row  !important;
+                        flex-wrap: wrap !important;
+                        gap: 10px;
+                        justify-content: center ;
+
+                        .price p{
+                            font-size: 10px;
+                            font-weight: 400;
+                        }
+                       
+                    }
+                }
+            }
+        }
+
+        .cashbacks {
+            .cashback-for{
+                p{
+                    display: none;
+                }
+            }
+
+            .cashback{
+                display: none;
+            }
+
+        }
+        .cashback-menu {
+         .cashback-top{
+             justify-content: space-between;
+             gap: 0;
+         }
+        } 
+         
+
+
+    }
+
+    
+    
+   
 }

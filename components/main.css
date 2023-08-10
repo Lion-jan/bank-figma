@@ -147,7 +147,7 @@ nav .navbar .profile .images .red-dot {
     gap: 24px !important;
   }
 }
-@media (max-width: 980px) {
+@media (max-width: 1119px) {
   .links ul {
     display: none !important;
   }
@@ -155,7 +155,7 @@ nav .navbar .profile .images .red-dot {
     padding: 15px !important;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 647px) {
   .me {
     display: none !important;
   }
@@ -171,7 +171,7 @@ nav .navbar .profile .images .red-dot {
 }
 .basic {
   display: flex;
-  flex-basis: 200px;
+  justify-content: space-between;
 }
 .basic .nav {
   padding: 30px 25px;
@@ -234,12 +234,16 @@ nav .navbar .profile .images .red-dot {
 .basic #card-data {
   padding: 30px;
   max-width: 516px;
+  flex-wrap: nowrap;
 }
-.basic .cards {
+.basic #card-data .carousel {
+  display: none;
+}
+.basic .cards1 {
   display: flex;
   gap: 30px;
 }
-.basic .cards .main-card {
+.basic .cards1 .main-card {
   width: 350px;
   height: 210px;
   background: linear-gradient(#FFA346 0%, #e0c31d 100%);
@@ -250,76 +254,76 @@ nav .navbar .profile .images .red-dot {
   border-radius: 10px;
   box-shadow: 0px 30px 60px 0px rgba(230, 46, 46, 0.15);
 }
-.basic .cards .main-card .card-balance {
+.basic .cards1 .main-card .card-balance {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.basic .cards .main-card .card-balance h1 {
+.basic .cards1 .main-card .card-balance h1 {
   color: var(--white-white, #FFF);
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
 }
-.basic .cards .main-card .card-balance h4 {
+.basic .cards1 .main-card .card-balance h4 {
   color: var(--white-white, #FFF);
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
 }
-.basic .cards .main-card .card-number {
+.basic .cards1 .main-card .card-number {
   display: flex;
   gap: 15px;
   align-items: center;
 }
-.basic .cards .main-card .card-number .dots {
+.basic .cards1 .main-card .card-number .dots {
   display: flex;
   gap: 3px;
 }
-.basic .cards .main-card .card-number .dots .dot {
+.basic .cards1 .main-card .card-number .dots .dot {
   width: 5px;
   height: 5px;
   border-radius: 50px;
   background-color: white;
 }
-.basic .cards .main-card .card-number h4 {
+.basic .cards1 .main-card .card-number h4 {
   color: var(--white-white, #FFF);
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
 }
-.basic .cards .main-card .card-owner {
+.basic .cards1 .main-card .card-owner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.basic .cards .main-card .card-owner h4 {
+.basic .cards1 .main-card .card-owner h4 {
   color: var(--white-white, #FFF);
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
 }
-.basic .cards .main-card .card-owner .ellips1 {
+.basic .cards1 .main-card .card-owner .ellips1 {
   width: 60px;
   height: 60px;
   border-radius: 50px;
   background-color: red;
   transform: translate(67px);
 }
-.basic .cards .main-card .card-owner .ellips2 {
+.basic .cards1 .main-card .card-owner .ellips2 {
   opacity: 0.7;
   width: 60px;
   height: 60px;
   border-radius: 50px;
   background-color: #FF5F00;
 }
-.basic .cards .other-cards {
+.basic .cards1 .other-cards {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
 }
-.basic .cards .other-cards .card {
+.basic .cards1 .other-cards .card {
   border-radius: 3px;
   box-shadow: 0px 1px 63px 0px rgba(244, 239, 255, 0.2) inset;
   width: 65px;
@@ -327,18 +331,18 @@ nav .navbar .profile .images .red-dot {
   padding: 4px 7px;
   cursor: pointer;
 }
-.basic .cards .other-cards .card h4 {
+.basic .cards1 .other-cards .card h4 {
   color: var(--white-white, #FFF);
   font-size: 10px;
   font-style: normal;
   font-weight: 700;
 }
-.basic .cards .other-cards .card .ellipses {
+.basic .cards1 .other-cards .card .ellipses {
   display: flex;
   justify-content: flex-end;
   padding-top: 5px;
 }
-.basic .cards .other-cards .card .ellipses .ellips3 {
+.basic .cards1 .other-cards .card .ellipses .ellips3 {
   width: 15px;
   height: 15px;
   border-radius: 50px;
@@ -346,7 +350,7 @@ nav .navbar .profile .images .red-dot {
   background-color: red;
   transform: translate(4px);
 }
-.basic .cards .other-cards .card .ellipses .ellips4 {
+.basic .cards1 .other-cards .card .ellipses .ellips4 {
   width: 15px;
   height: 15px;
   border-radius: 50px;
@@ -354,13 +358,13 @@ nav .navbar .profile .images .red-dot {
   background-color: #FF5F00;
   opacity: 0.6;
 }
-.basic .cards .other-cards .card1 {
+.basic .cards1 .other-cards .card1 {
   background: linear-gradient(197deg, #6246FF 0%, #FFB9B9 100%);
 }
-.basic .cards .other-cards .card2 {
+.basic .cards1 .other-cards .card2 {
   background: linear-gradient(197deg, #FFA346 0%, #F2E32E 100%);
 }
-.basic .cards .other-cards .card3 {
+.basic .cards1 .other-cards .card3 {
   background: linear-gradient(197deg, #3B3B3B 0%, #767676 100%);
 }
 .basic .circle-graph {
@@ -455,6 +459,95 @@ nav .navbar .profile .images .red-dot {
   font-weight: 700;
 }
 
+@media (max-width: 1280px) {
+  .nav {
+    display: none !important;
+  }
+  #right-section {
+    display: none !important;
+  }
+}
+@media (max-width: 1119px) {
+  .basic {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100% !important;
+  }
+  .basic #card-data {
+    max-width: 100%;
+  }
+  .basic #card-data .carousel {
+    display: block;
+    transform: scale(0.7);
+  }
+  .basic #card-data .cards1 {
+    display: none;
+  }
+  .basic .circle-graph .circle-graph-flex {
+    flex-direction: row !important;
+    gap: 54px;
+  }
+  .basic .circle-graph #card-data .carousel {
+    display: block !important;
+  }
+  .basic #cashback {
+    max-width: 100% !important;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .basic .cards {
+    justify-content: center;
+  }
+}
+@media (max-width: 647px) {
+  #card-data {
+    max-width: 100%;
+  }
+  #card-data .carousel {
+    display: none !important;
+  }
+  #card-data .cards1 {
+    display: block !important;
+    align-items: center;
+  }
+  #card-data .cards1 .other-cards {
+    flex-direction: row;
+    padding-left: 20px;
+    transform: translate(0, -10px);
+  }
+  .basic {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100% !important;
+  }
+  .basic #card-data {
+    max-width: 100%;
+  }
+  .basic .circle-graph .circle-graph-flex {
+    flex-direction: column !important;
+    gap: 54px;
+  }
+  .basic .circle-graph .circle-graph-flex .circle-graph-bottom .pricing {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 10px;
+    justify-content: center;
+  }
+  .basic .circle-graph .circle-graph-flex .circle-graph-bottom .pricing .price p {
+    font-size: 10px;
+    font-weight: 400;
+  }
+  .basic .cashbacks .cashback-for p {
+    display: none;
+  }
+  .basic .cashbacks .cashback {
+    display: none;
+  }
+  .basic .cashback-menu .cashback-top {
+    justify-content: space-between;
+    gap: 0;
+  }
+}
 #cashback {
   max-width: 635px;
 }
@@ -578,6 +671,25 @@ nav .navbar .profile .images .red-dot {
 .cards {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
+}
+.cards .item1 {
+  order: 1;
+}
+.cards .item2 {
+  order: 2;
+}
+.cards .item3 {
+  order: 3;
+}
+.cards .item4 {
+  order: 4;
+}
+.cards .item5 {
+  order: 5;
+}
+.cards .item6 {
+  order: 6;
 }
 .cards p {
   color: var(--gray-blue-grey-blue-50, #4D5E80);
