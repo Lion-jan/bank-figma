@@ -1,0 +1,298 @@
+@mixin anothers {
+    display: flex;
+    gap: 3px;
+    padding: 17px 9px;
+    background-color: #fff;
+    border-radius: 100px;
+    box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+    cursor: pointer;
+
+    &>div {
+        @include dot (5px, 5px, rgb(184, 182, 182))
+    }
+}
+
+
+
+
+#right-section {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-right: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+   
+
+    .account {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .account-top {
+
+
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            gap: 224px;
+
+            .another {
+                display: flex;
+                gap: 3px;
+                cursor: pointer;
+                padding: 5px;
+
+                &>div {
+                    @include dot (5px, 5px, rgb(221, 214, 214));
+                }
+            }
+        }
+
+        .account-image {
+
+            padding: 15px;
+            border-bottom: 2px solid #8833FF;
+            border-left: 2px solid #8833FF;
+            border-right: 2px solid #8833FF;
+            border-top: 2px solid #f2f3f5;
+            border-radius: 200px;
+            position: relative;
+
+            transform: rotate(45deg);
+
+            img {
+                border-radius: 200px;
+                width: 110px;
+                height: 110px;
+                overflow: hidden;
+                // padding: 10px;
+                transform: rotate(-45deg);
+
+
+            }
+
+
+            .plus {
+                @include icon ();
+                background: var(--orange-orange, #F63);
+                transform: scale(0.4);
+                position: absolute;
+                top: -50px;
+                right: -42px;
+                cursor: pointer;
+            }
+        }
+
+        .account-name {
+            h3 {
+                color: var(--gray-blue-grey-blue-60, #6B7A99);
+                text-align: center;
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+    }
+
+
+    .about-cards {
+        .about-cards-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h4 {
+                color: var(--gray-blue-grey-blue-60, #6B7A99);
+                font-size: 12px;
+                font-weight: 700;
+            }
+
+            .another {
+                display: flex;
+                gap: 3px;
+                cursor: pointer;
+                padding: 5px;
+
+                &>div {
+                    @include dot (5px, 5px, rgb(221, 214, 214));
+                }
+            }
+
+        }
+
+        .about-cards-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-top: 25px;
+
+            .about-card {
+                display: flex;
+                justify-content: space-between;
+
+                .card {
+                    border-radius: 3px;
+                    box-shadow: 0px 1px 63px 0px rgba(244, 239, 255, 0.20) inset;
+                    width: 65px;
+                    height: 40px;
+                    padding: 4px 7px;
+                    cursor: pointer;
+
+                    h4 {
+                        color: var(--white-white, #FFF);
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 700;
+                    }
+
+                    .ellipses {
+                        display: flex;
+                        justify-content: flex-end;
+                        padding-top: 5px;
+
+                        .ellips3 {
+                            @include dot (15px, 15px, transparent);
+                            background-color: red;
+                            transform: translate(4px);
+                        }
+
+                        .ellips4 {
+                            @include dot (15px, 15px, transparent);
+                            background-color: #FF5F00;
+                            opacity: 0.6;
+                        }
+
+                    }
+                }
+
+                .card1 {
+                    background: linear-gradient(197deg, #6246FF 0%, #FFB9B9 100%);
+
+                }
+
+                .card2 {
+                    background: linear-gradient(197deg, #FFA346 0%, #F2E32E 100%);
+
+
+                }
+
+                .card3 {
+                    background: linear-gradient(197deg, #3B3B3B 0%, #767676 100%);
+                }
+
+                .about-card-text {
+                    h4 {
+                        color: var(--gray-blue-grey-blue-70, #7D8FB3);
+                        font-size: 12px;
+                        font-weight: 700;
+                    }
+
+                    h3 {
+                        color: var(--gray-blue-grey-blue-60, #6B7A99);
+                        font-size: 12px;
+                        font-weight: 900;
+                    }
+                }
+
+                .previous {
+                    img {
+                        @include icon ();
+                        cursor: pointer;
+                    }
+                }
+
+
+            }
+        }
+
+
+    }
+
+    .right-section-top {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .settings {
+        .settings-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h4 {
+                color: var(--gray-blue-grey-blue-60, #6B7A99);
+                font-size: 12px;
+                font-weight: 700;
+            }
+
+            .another {
+                display: flex;
+                gap: 3px;
+                cursor: pointer;
+                padding: 5px;
+
+                &>div {
+                    @include dot (5px, 5px, rgb(221, 214, 214));
+                }
+            }
+        }
+
+        .settings-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-top: 25px;
+
+            .set {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                cursor: pointer;
+
+                img {
+                    @include icon ();
+                }
+
+                h5 {
+                    color: var(--gray-blue-grey-blue-60, #6B7A99);
+                    font-size: 12px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+
+
+    .right-section-bottom {
+        padding: 26px 85px;
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        align-items: center;
+        text-align: center;
+        
+        border-radius: 10px;
+background: var(--yellow-yellow-10, rgba(255, 203, 51, 0.10));
+
+        .help {
+            h5 {
+                color: var(--orange-orange, #F63);
+                font-size: 12px;
+                font-weight: 700;
+            }
+        }
+
+        .number {
+            h4 {
+                color: var(--purple-purple, #83F);
+                font-size: 12px;
+                font-weight: 900;
+            }
+        }
+
+    }
+
+}

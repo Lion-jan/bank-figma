@@ -39,7 +39,7 @@ box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        gap: 200px;
+        gap: 304px;
         border-right: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
 
         .tools {
@@ -244,6 +244,7 @@ box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
     .circle-graph {
         margin-top: 75px;
         background-color: #fff;
+        border-radius: 10px;
 
 
         .graph-groups {
@@ -304,7 +305,7 @@ box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
             display: flex;
             flex-direction: column ;
             align-items: center;
-            gap: 44px;
+            gap: 94px;
       
             .circle-graph-bottom {
                 .pricing {
